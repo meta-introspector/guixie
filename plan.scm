@@ -8,6 +8,7 @@
   ;; Implement the OODA loop for consensus building
   (define (observe)
     ;; Observe changes and inputs from the environment
+    (extract-details)
     #;... )
 
   (define (orient)
@@ -139,5 +140,47 @@
 	      )
         %base-services)))) ;; Include base system services
 
+;; Define a procedure to extract details from the code
+(define (extract-details)
+  ;; Extract details about the operating system configuration
+  (display "Operating System Configuration:")
+  (newline)
+  (let ((system-services (operating-system-services guixie)))
+    (for-each (lambda (service)
+                (display "  - ")
+                (display (service-kind service))
+                (newline))
+              system-services))
+  
+  ;; Extract details about the procedures for implementation
+  (display "Procedures for Implementation:")
+  (newline)
+  (let ((procedures '(implementation-driver
+                      configuration-management
+                      testing-and-deployment
+                      community-engagement
+                      ooda-loop)))
+    (for-each (lambda (procedure)
+                (display "  - ")
+                (display (symbol->string procedure))
+                (newline))
+              procedures))
+  
+  ;; Extract details about the OODA loop integration
+  (display "OODA Loop Integration:")
+  (newline)
+  (let ((ooda-steps '(observe orient decide act)))
+    (for-each (lambda (step)
+                (display "  - ")
+                (display (symbol->string step))
+                (newline))
+              ooda-steps)))
+
+;; Execute the extract-details function
+
+
 ;; Execute the plan
 (execute-plan)
+
+
+
