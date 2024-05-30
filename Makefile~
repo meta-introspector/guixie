@@ -1,0 +1,2 @@
+world:
+	guix package --install-from-file=./plan.scm --verbose --debug
