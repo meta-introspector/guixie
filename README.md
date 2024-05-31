@@ -8,6 +8,6 @@ to itself, it composes itself and creates a new version of itself to build the n
 
 The idea is that running versions
 of it create new versions and
-those results are aggregated in a p2p netowork that validates results with zkps
+those results are aggregated in a p2p network that validates results with zkps
 and allows for resuable binary results.
 
